@@ -1,0 +1,31 @@
+<form method="post" action="../test/bbs.php" enctype="<ENCTYPE>">
+<input type="hidden" name="bbs" value="<BBS>">
+<input type="hidden" name="key" value="<KEY>">
+<input type="hidden" name="time" value="<TIME>">
+<table border="0" cellpadding="3" width="100%">
+<tr>
+<td nowrap align="right">名前:</td><td><input type="text" name="FROM" style="width:50%;"></td>
+</tr>
+<tr>
+<td nowrap align="right">E-mail:</td><td><input type="text" name="mail" style="width:50%;"></td>
+</tr>
+<td nowrap align="right" valign="top">内容:</td><td><textarea style="width:90%; height:80px;" wrap="soft" name="MESSAGE"></textarea></td>
+</tr>
+<tr>
+<FILE_FORM>
+</tr>
+<tr>
+<td></td><td><input type="submit" value="書き込む" name="submit"></td>
+</tr>
+<tr>
+<td colspan=2>
+<a href="../test/read.php/<BBS>/<KEY>/">全部読む</a>
+<a href="../test/read.php/<BBS>/<KEY>/l50">最新50</a>
+<a href="../test/read.php/<BBS>/<KEY>/-100">1-100</a>
+<a href="#menu">板のトップ</a>
+<a href="<PATH>">リロード</a>
+</td>
+</tr>
+</table>
+</form>
+</dl></td></tr></table><br>

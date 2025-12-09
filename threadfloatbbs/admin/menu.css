@@ -1,0 +1,50 @@
+.menu {
+	color: #333300;
+	text-decoration: none;
+}
+
+.title {
+	color: #CC33CC;
+	text-decoration: none;
+}
+
+.item {
+	color: #0000FF;
+	text-decoration: none;
+}
+
+.item:hover {
+	color: #FF0000;
+	text-decoration: underline;
+}
+
+body {
+	font-size: 100%;
+	font-weight: normal; !important
+	text-decoration: none; !important
+	font-family: 'メイリオ', Meiryo, 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',  Helvetica, Arial, sans-serif; !important
+	word-wrap : break-word;
+	overflow-wrap : break-word;
+	background-color: #fcfcfc;
+}
+
+hr {
+	border: 1px solid #666666;
+}
+
+hr.sub {
+	border-style: dotted;
+	margin-left: 0px;
+	width: 80%;
+}
+
+ul {
+	margin: 0px 0px 0px 15px;
+	padding: 0px;
+}
+
+.dir{
+	color: #333300;
+	text-decoration: none;
+	cursor: pointer;
+}

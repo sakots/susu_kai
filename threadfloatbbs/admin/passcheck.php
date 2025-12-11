@@ -52,13 +52,13 @@ if ($admin) {
 		exit;
 	}
 	if ($_COOKIE['adminpass']) {
-		if (crypt($_COOKIE['adminpass'], $admin) != $admin) {
+		if (password_verify($_COOKIE['adminpass'], $admin) != $admin) {
 			disperror("ERROR!", "パスワードが違います");
 			exit;
 		}
 	}
 	if (!$_COOKIE['adminpass'] and $_POST['adminpass']) {
-		if (crypt($_POST['adminpass'], $admin) != $admin) {
+		if (password_verify($_POST['adminpass'], $admin) != $admin) {
 			disperror("ERROR!", "パスワードが違います");
 			exit;
 		}
@@ -89,7 +89,7 @@ else {
 		exit;
 	}
 	else {
-		$admin = crypt($_POST['setpass']);
+		$admin = password_hash($_POST['setpass'],PASSWORD_DEFAULT);
 		$fp = @fopen($passfile, "w");
 		fputs($fp, $admin);
 		fclose($fp);

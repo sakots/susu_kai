@@ -10,10 +10,8 @@ $fll = 0;
 if (!isset($_POST['name'])) $_POST['name'] = '';
 if (!isset($_POST['password'])) $_POST['password'] = '';
 if (!isset($_POST['passold'])) $_POST['passold'] = '';
-if (get_magic_quotes_gpc()) {
-	$_POST['name'] = stripslashes($_POST['name']);
-	$_POST['password'] = stripslashes($_POST['password']);
-}
+$_POST['name'] = stripslashes($_POST['name']);
+$_POST['password'] = stripslashes($_POST['password']);
 #---------------追加
 if (isset($_POST['mode']) and $_POST['mode'] == "add") {
 	$fll = 1;

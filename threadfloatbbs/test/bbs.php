@@ -45,7 +45,7 @@ require $PATH.'config.php';
 #　入力情報を取得（ＰＯＳＴ）
 #====================================================
 if ($_SERVER['REQUEST_METHOD'] != 'POST') DispError ("ERROR!","ERROR:不正な投稿です!");
-if (get_magic_quotes_gpc()) $_POST = array_map("stripslashes", $_POST);
+$_POST = array_map("stripslashes", $_POST);
 //$_POST['subject'] = str_replace('"', "&quot;", $_POST['subject']); //2021-09-26停止
 //$_POST['subject'] = str_replace("<", "&lt;", $_POST['subject']); //2021-09-26停止
 //$_POST['subject'] = str_replace(">", "&gt;", $_POST['subject']); //2021-09-26停止
@@ -534,7 +534,7 @@ if (isset($_FILES['file']['name']) and $_FILES['file']['name']) {
 
 </html>
 <?
-	}
+}
 	# $topicがあるときはエラー画面表示
 	else {
 		?>

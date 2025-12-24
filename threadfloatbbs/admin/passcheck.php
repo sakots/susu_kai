@@ -25,6 +25,9 @@ function disperror($title, $topic) {
 header("Content-Type: text/html; charset=utf-8");
 $passfile = "passfile.cgi";
 $admin_array = @file($passfile);
+if ($admin_array === false) {
+	$admin_array = [];
+}
 if (!isset($admin_array[0])) $admin_array[0] = '';
 $admin = rtrim($admin_array[0]);
 if (!isset($_COOKIE['adminpass'])) $_COOKIE['adminpass'] = '';
